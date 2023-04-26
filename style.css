@@ -1,5 +1,8 @@
 body{
     display: grid;
+    height: auto;
+    padding: 0;
+    margin: 0;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 60px 50px auto 50px;
     grid-template-areas:
@@ -11,6 +14,8 @@ body{
 
 main{
     grid-area: main;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
 
 footer{
@@ -20,10 +25,16 @@ footer{
 header{
     grid-area: header; 
     text-align: center;
+    margin: 0;
+}
+
+h1{
+    margin: 0;
 }
 
 nav{
     grid-area: nav;
+    margin: 0;
 }
 
 nav li{
@@ -46,13 +57,32 @@ nav a:hover{
 nav>ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0;
 }
 
-#index img{
-    display: flex;
-    width: 550px;
-}
-#index p{
+footer{
+    grid-area: footer;
     text-align: center;
-    margin-left: 50px;
+    background-color: #223;
+    color: #ffffff;
+}
+
+img{
+    display: flex;
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    margin-left: 50%;
+
+}
+#index section{
+    display: main;
+    text-align: left;
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    nav ul{
+        flex-direction: column;
+    }
 }
