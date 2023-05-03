@@ -4,7 +4,7 @@ body{
     padding: 0;
     margin: 0;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 50px auto 50px;
+    grid-template-rows: 50px 50px auto 50px;
     grid-template-areas:
     "header header"
     "nav nav"
@@ -44,6 +44,7 @@ nav li{
     font-size: 1em;
     border-style: solid;
     border-color: black;
+    margin: 0;
 }
 
 nav a{
@@ -53,6 +54,10 @@ nav a{
 
 nav a:hover{
     color:blue;
+}
+
+ul{
+    padding: 0;
 }
 
 nav>ul{
@@ -70,6 +75,11 @@ footer{
     text-align: center;
     background-color: #223;
     color: #ffffff;
+    
+}
+
+footer p{
+    margin: 1rem;
 }
 
 img{
@@ -80,6 +90,12 @@ img{
     margin-left: 50%;
 
 }
+
+p{
+    margin:0;
+    font-size: large;
+}
+
 #index section{
     display: main;
     text-align: left;
@@ -96,4 +112,12 @@ img{
     width: 23%;
     margin: 0;
     display: inline;
+}
+
+#tvåtaktGoN img{
+    margin-left: 15em;
+}
+
+#tvåtaktGoN p{
+    text-align: center;
 }
