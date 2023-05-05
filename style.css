@@ -96,6 +96,21 @@ p{
     font-size: large;
 }
 
+
+
+table,tr,td,th{
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-collapse: collapse;
+    font-size: 17px;
+    color: blue;
+}
+
+figcaption{
+    text-align: center;
+}
+
 #index section{
     display: main;
     text-align: left;
