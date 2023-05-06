@@ -53,7 +53,7 @@ nav a{
 }
 
 nav a:hover{
-    color:blue;
+    color: darkblue;
 }
 
 ul{
@@ -140,3 +140,24 @@ figcaption{
 #Ecu img {
     margin: 0;
 }
+
+#Ecu p:nth-child(2), #Ecu p:nth-child(3){
+    font-weight: bold;
+}
+
+
+#fyrtakt img{
+    width: 23%;
+    margin: 0;
+    display: inline;
+}
+
+#fyrtaktGoN img{
+    margin-left: 15em; 
+}
+
+#fyrtaktGoN p{
+    text-align: center; 
+}
+
+/* GlÖM INTE VALIDERA KODEN ELLER ATT KOMMENTERA DEN */
