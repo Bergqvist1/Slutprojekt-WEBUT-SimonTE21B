@@ -1,4 +1,6 @@
+/* Layout för header, nav, main,footer, bakgrundsfärgen på alla sidor och margin: 0; att den täcker hela sidan  */
 body{
+    background-color:antiquewhite;
     display: grid;
     height: auto;
     padding: 0;
@@ -11,65 +13,14 @@ body{
     "main main"
     "footer footer"
 }
-
+/* Mainen blir en del av gridden, den har 2 kolumner och texten har typsnittet "Times New Roman" */
 main{
     grid-area: main;
     display:grid;
     grid-template-columns:1fr 1fr;
     font-family:'Times New Roman', Times, serif;
 }
-
-footer{
-    grid-area: footer;
-}
-
-header{
-    grid-area: header; 
-    text-align: center;
-    margin: 0;
-}
-
-h1{
-    margin: 0;
-}
-
-nav{
-    grid-area: nav;
-    margin: 0;
-}
-
-nav li{
-    list-style-type: none;
-    text-align: center;
-    font-size: 1em;
-    border-style: solid;
-    border-color: black;
-    margin: 0;
-}
-
-nav a{
-    text-decoration: none;
-    width: 10%;
-}
-
-nav a:hover{
-    color: darkblue;
-}
-
-ul{
-    padding: 0;
-}
-
-nav>ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin: 0;
-}
-
-a{
-    text-decoration: none;
-}
-
+/* Footern är med i gridden, texten är centrerad och bakgrunds frägen samt typsnitts färgen är rätt. */
 footer{
     grid-area: footer;
     text-align: center;
@@ -77,11 +28,65 @@ footer{
     color: #ffffff;
     
 }
-
+/* gör att texten ligger i mitten av footern  */
 footer p{
     margin: 1rem;
 }
+/* Headern är med i gridden, texten i headern centrerad och ligger på rätt plats med margin: 0; */
+header{
+    grid-area: header; 
+    text-align: center;
+    margin: 0;
+}
+/* Gör att h1an ligger på rätt plats. */
+h1{
+    margin: 0;
+}
 
+
+/* Gör att navbaren är en del av gridden och att den ligger på rätt sida.  */
+nav{
+    grid-area: nav;
+    margin: 0;
+    margin-top: 1%;
+}
+
+/* Gör kanten runt globala menyn svart, rätt storlek på text, centrerad text, kanten är i stilen fast. */
+nav li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 1em;
+    border-style: solid;
+    border-color: hsl(0, 0%, 0%);
+    margin: 0;
+}
+/* Länken i globalamenyerna inga understreck samt rätt storlek */
+nav a{
+    text-decoration: none;
+    width: 10%;
+}
+/* När muspekaren är över en länk i globala menyn blir text färgen darkblue */
+nav a:hover{
+    color: darkblue;
+}
+
+/*  gör att ul området har rätt storlek och att den inte tar mer plats än vad den behöver */
+ul{
+    padding: 0;
+}
+/* naven blir en del av griden och är uppdelad i 5 delar, 1 för varje sida */
+nav>ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0;
+}
+/* gör att länkar som finns i t.ex en p tag inte har ett understreck för att inte stå ut som om den hade understreck. */
+a{
+    text-decoration: none;
+}
+/*  */
+
+/* sätter en standard för alla bilder på sida, display flex så att de får samma höjd och så att de passar. */
 img{
     display: flex;
     width: 50%;
@@ -90,16 +95,35 @@ img{
     margin-left: 50%;
 
 }
-
+/* gör att paragraferna sitter på rätt plats genom att ta bort onödigt mellanrum mellan raderna och att texten är rätt storlek  */
 p{
     margin:0;
     font-size: large;
 }
+/* LoVe Focus HAte */ /*  */
+a:link{
+    color:navy;
+}
+/* LoVe Focus HAte */
+a:visited{
+    color: blueviolet;
+}
+/* LoVe Focus HAte */
+a:focus{
+    color: rgb(255,0,0);
+}
+/* LoVe Focus HAte */
+a:hover{
+    color:#0000ff;
+}
+/* LoVe Focus HAte */
+a:active{
+    color: green;
+}
 
-
-
+/* Tabell, rätt färg, storlek, stil och färg  */
 table,tr,td,th{
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     border-width: 3px;
     border-style: solid;
     border-collapse: collapse;
@@ -107,57 +131,65 @@ table,tr,td,th{
     color: blue;
 }
 
+/* Gör att texten under i figcaption på sidorna 2tGoN & 4tGoN sitter under varje bild perfekt. */
 figcaption{
     text-align: center;
 }
-
+/* Gör att form länken sitter på rätt plats. */
+#index header p{
+    margin: 0;
+}
+/* Gör att texten sitter på rätt plats. */
 #index section{
-    display: main;
     text-align: left;
     margin-left: 10px;
 }
-
+/* Responsivitet för NAVen */
 @media (max-width: 600px) {
     nav ul{
         flex-direction: column;
     }
 }
-
+/* Rätt bild storlek och så att de passar på sidan. */
 #tvåtakt img{
     width: 23%;
     margin: 0;
     display: inline;
 }
-
+/* Gör så att bilderna sitter på  rätt plats  */
 #tvåtaktGoN img{
     margin-left: 15em;
 }
-
+/* Gör så texten är centrerad  */
 #tvåtaktGoN p{
     text-align: center;
 }
-
+/* Gör att bilderna sitter rätt. */
 #Ecu img {
     margin: 0;
 }
-
+/* gör att texten i header inte blir fet stil */
+#Ecu header p{
+    font-weight: normal;
+}
+/*  gör att de första 2 p tag raderna blir i fet stil.  */
 #Ecu p:nth-child(2), #Ecu p:nth-child(3){
     font-weight: bold;
 }
-
-
+/* rätt storlek samt att de får plats på sidan så som de ska. */
 #fyrtakt img{
     width: 23%;
     margin: 0;
     display: inline;
 }
-
+/* gör så bilden sitter på rätt plats */
 #fyrtaktGoN img{
     margin-left: 15em; 
 }
-
+/* gör så texten vid bilderna sitter på rätt plats. */
 #fyrtaktGoN p{
     text-align: center; 
 }
 
-/* GlÖM INTE VALIDERA KODEN ELLER ATT KOMMENTERA DEN */
+
+/* ALL KOD ÄR VALIDERAD OCH INGA ERRORS!!!!*/

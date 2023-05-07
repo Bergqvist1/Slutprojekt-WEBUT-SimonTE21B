@@ -2,10 +2,10 @@
 <html lang="sv"> 
     <head> 
         <meta charset="UTF-8">
-        <title> 4t-MC-slutprojekt </title>
+        <title> Form-MC-slutprojekt </title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="4-takt"> 
+    <body id="form"> 
         <header> 
             <h1> 
                 <a href="index.html"> Välkommen </a>
@@ -30,13 +30,34 @@
                 </li>
             </ul>
         </nav>
-        <form> 
-
-
-
-
-            
-        </form>
+        <main>
+            <section>
+                <img src="https://www.freepnglogos.com/uploads/smiley-png/image-thumb-smiley-community-central-fandom-18.png" alt="Glad">
+            </section>
+            <section>
+                <h2> Om du tycker något saknas ge gärna förslag!</h2>
+                <form action="action.php" method="post"> <!-- formuläret och dess metoder  -->
+                    <label for="Fnamn"> Skriv ditt förnamn </label><br> <!-- Rubrik till formulär cellen -->
+                    <input type="text" name="Fname" id="Fnamn"><br> <!-- Formulär cellen -->
+                    <label for="Enamn"> Skriv ditt efternamn </label><br>
+                    <input type="text" name="Ename" id="Enamn"><br>
+                    <label for="epost"> Skriv din Email-adress</label><br>
+                    <input type="email" name="epost" id="epost"><br>
+                    <label for="Sida"> Välj sidan du tycker något saknas på</label>
+                    <select name="Sida" id="Sida"> <!-- Vilken sida som du föreslår info. En roll down meny i princip -->
+                        <option value="Index"> Startsida </option> <!-- ett av alternativen  -->
+                        <option value="2-takt"> 2-takt </option>
+                        <option value="2-taktGoN"> 2t Gamla & nya </option>
+                        <option value="4-takt"> 4-takt</option>
+                        <option value="4-taktGoN"> 4t Gamla & nya </option>
+                        <option value="Ecu"> Ecu </option>
+                    </select> <br>
+                    <p> Skriv ditt förslag här:  </p><br>
+                    <textarea> Förslag </textarea><br> <!-- I rutan står det förslag bara för att visa att det är där man ska skriva sitt förslag. -->
+                    <button type="submit" onclick="alert('Tack för förslaget!')">Skicka</button> <!-- Skicka knappen  -->
+                </form>
+            </section>
+        </main>
         <footer>
             <p> Skapad av Simon Bergqvist </p>
         </footer>

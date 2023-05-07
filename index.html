@@ -1,39 +1,42 @@
-<!DOCTYPE html>
-<html lang="sv"> 
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> MC-slutprojekt </title>
-        <link rel="stylesheet" href="style.css">
+<!DOCTYPE html> <!--Berättar för webbläsaren vilken typ av dokument det är. -->
+<html lang="sv"> <!-- HTMLs språk aka sidans språk -->
+    <head> <!-- Kontainer för data, allt som finns i headen visas inte på sidan -->
+        <meta charset="UTF-8"> <!-- Tecken kodningen som används är UTF-8 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Stry själva bredden och skalning av visningsporten så rätt storlek uppnås på alla enheter som använder sidan -->
+        <title> Index-MC-slutprojekt </title> <!-- Titel på detta dokumentet -->
+        <link rel="stylesheet" href="style.css"> <!-- länk till min css -->
     </head>
-    <body id="index"> 
-        <header> 
-            <h1> 
-                <a href="index.html"> Välkommen </a>
+    <body id="index"> <!-- Kroppen i html dokumentet, innehåller all kod som finns i dokumentet. Eget ID för just denna sidan id="index". Möjliggör lättare CSS användning  -->
+        <header> <!-- Är till som en huvudmeny i globala menyn -->
+            <h1> <!-- Första rubrik, Det som står längst överst  -->
+                <a href="index.html"> Välkommen </a> <!-- Om man trycker på första rubriken kommer man till index sidan.  -->
             </h1>
+            <p> <!-- Till för att göra formuläret lättare att nå och påverka i t.ex CSS. -->
+                <a href="form.html"> Skicka förslag på innehåll ← </a> <!-- Texten som användarna ser samt länken till formuläret  --> <!--  -->
+            </p>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="2takt.html">2-Takt</a>
+        <nav> <!-- Navigerings menyn -->
+            <ul> <!-- oordnad lista, barn till nav  -->
+                <li> <!-- länk till de olika sidorna -->
+                    <a href="2takt.html">2-Takt</a> <!-- länk till 2 takt sidan  samt hänvisade dokumentet --> <!--  -->
                 </li>
                 <li>
-                    <a href="2tGoN.html">Gamla och Nya 2-takts MC</a>
+                    <a href="2tGoN.html">Gamla och Nya 2-takts MC</a> <!-- länk till gamla och nya 2-takts mc sidan samt hänvisade dokumentet -->
                 </li>
                 <li>
-                    <a href="Ecu.html">Ecu</a>
+                    <a href="Ecu.html">Ecu</a> <!-- länk till ecu sidan samt hänvisade dokumentet -->
                 </li>
                 <li> 
-                    <a href="4takt.html">4-Takt</a>
+                    <a href="4takt.html">4-Takt</a> <!-- länk till 4-takt sidan samt hänvisade dokumentet -->
                 </li>
                 <li> 
-                    <a href="4tGoN.html">Gamla och nya 4-takts MC</a>
+                    <a href="4tGoN.html">Gamla och nya 4-takts MC</a> <!-- länk till gamla och nya 4-takts mc sidan samt hänvisade dokumentet   -->
                 </li>
             </ul>
         </nav>
-        <main>
-            <section> 
-                <p> Välkommen till min motorcykelsida! </p>
+        <main> <!-- Huvuddelen av dokumentet  -->
+            <section> <!-- definerar en del av mainen samt den innehåller text  -->
+                <p> Välkommen till min motorcykelsida! </p> <!-- text stycken  -->
                 <p> Här kommer jag att lära dig de första stegen och enklaste delarna inom motorcyklar och hur de fungerar.</p>
                 <p> En motorcykel är ett fordon som har minst 2 hjul och kan framföras minst i hastigheten 45 km/h. </p>
                 <p> Det måste finnas en förbränningsmotor som har en slagvolym som överstiger 50cc.(kubikcentimeter) </p>
@@ -43,57 +46,59 @@
                 <p> På min sida kommer jag lära ut grunderna inom mc. T.ex om skillnaderna mellan <a href="2takt.html"> 2takt </a> och <a href="4takt.html"> 4takt.</a> </p>
                 <p> Även lite historia om hur motorcyklarna har utvecklats och ändrats utseende vis genom åren.</p>
                 <p> Här nere kommer en tabell på olika sorters motorcyklar och dess aspekter.</p>
-                <table> <!-- Inspiration för tabell tagen från tidigare uppgift. -->
-                    <tr> 
-                        <th scope="col"> Namn </th>
-                        <th scope="col"> Årsmodell </th>
-                        <th scope="col"> Takt </th>
-                        <th scope="col"> Slagvolym</th>
-                        <th scope="col"> Hästkrafter</th>
-                    </tr>
-                    <tr> 
-                        <td> Kawasaki H2</td>
-                        <td> 2022 </td>
-                        <td> 4-takt </td>
-                        <td> 998cc </td>
-                        <td> 200hp </td>
-                    </tr>
-                    <tr> 
-                        <td> KTM EXC 500 </td>
-                        <td> 2017 </td>
-                        <td> 4-takt </td>
-                        <td> 510cc </td>
-                        <td> 63hp</td>
-                    </tr>
-                    <tr> 
-                        <td> Yamaha MT-07 </td>
-                        <td> 2023 </td>
-                        <td> 4-takt </td>
-                        <td> 689cc </td>
-                        <td> 72hp </td>
-                    </tr>
-                    <tr> 
-                        <td> KTM EXC 300</td>
-                        <td> 2021 </td>
-                        <td> 2-takt </td>
-                        <td> 300cc </td>
-                        <td> 56hp </td>
-                    </tr>
-                    <tr> 
-                        <td> Honda NSR 500 </td>
-                        <td> 1990 </td>
-                        <td> 2-takt </td>
-                        <td> 499cc </td>
-                        <td> 200hp </td>
-                    </tr>
+                <table> <!-- Inspiration för tabell tagen från tidigare uppgift. min tabell -->
+                    <tbody> <!-- tabellens kropp -->
+                     <tr> <!-- tabell raden   -->
+                         <th scope="col"> Namn </th> <!-- tabell header   -->
+                         <th scope="col"> Årsmodell </th>
+                         <th scope="col"> Takt </th>
+                         <th scope="col"> Slagvolym</th>
+                         <th scope="col"> Hästkrafter</th>
+                     </tr>
+                     <tr> 
+                         <td> Kawasaki H2</td> <!-- tabell data cell -->
+                         <td> 2022 </td>
+                         <td> 4-takt </td>
+                         <td> 998cc </td>
+                         <td> 200hp </td>
+                     </tr>
+                     <tr> 
+                         <td> KTM EXC 500 </td>
+                         <td> 2017 </td>
+                         <td> 4-takt </td>
+                         <td> 510cc </td>
+                         <td> 63hp</td>
+                     </tr>
+                     <tr> 
+                         <td> Yamaha MT-07 </td>
+                         <td> 2023 </td>
+                         <td> 4-takt </td>
+                         <td> 689cc </td>
+                         <td> 72hp </td>
+                     </tr>
+                     <tr> 
+                         <td> KTM EXC 300</td>
+                         <td> 2021 </td>
+                         <td> 2-takt </td>
+                         <td> 300cc </td>
+                         <td> 56hp </td>
+                     </tr>
+                     <tr> 
+                         <td> Honda NSR 500 </td>
+                         <td> 1990 </td>
+                         <td> 2-takt </td>
+                         <td> 499cc </td>
+                         <td> 200hp </td>
+                     </tr>
+                    </tbody>
                 </table>
             </section> 
             <section> 
-                <img src="https://content2.kawasaki.com/ContentStorage/KMC/Products/8886/e5387bf1-8648-47d1-a69a-980efb877709.png?w=767" alt="KawH2">
+                <img src="https://content2.kawasaki.com/ContentStorage/KMC/Products/8886/e5387bf1-8648-47d1-a69a-980efb877709.png?w=767" alt="KawH2"> <!-- bild samt vad jag kallar den -->
                 <img src="https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_BIKE_PERS_REVO_MY23-HQV-701-Supermoto-US-front-right_%23SALL_%23AEPI_%23V1.png" alt="supermoto">
             </section>
         </main>
-        <footer>
+        <footer> <!-- det som visas längst ner på sidan, att den är skapad av mig   -->
             <p> Skapad av Simon Bergqvist </p>
         </footer>
     </body>
