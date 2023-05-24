@@ -13,6 +13,29 @@ body{
     "main main"
     "footer footer"
 }
+
+/* grid mainens avvikande layout (avvikande layout nummer 2) */
+#form main{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* så rubriken sitter i mitten och passar med formuläret. */
+.rubrikform{
+    margin-left: 35%;
+}
+
+/* Så att formuläret ligger i mitten. */
+#form form{
+    margin-left: 42%;
+}
+
+/* ecusidans main avviker i layout (avvikande layout nummer 3) */
+#Ecu main{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 /* Mainen blir en del av gridden, den har 2 kolumner och texten har typsnittet "Times New Roman" */
 main{
     grid-area: main;
@@ -38,10 +61,7 @@ header{
     text-align: center;
     margin: 0;
 }
-/* Gör att h1an ligger på rätt plats. */
-h1{
-    margin: 0;
-}
+
 
 
 /* Gör att navbaren är en del av gridden och att den ligger på rätt sida.  */
@@ -131,12 +151,9 @@ table,tr,td,th{
     color: blue;
 }
 
-/* Gör att texten under i figcaption på sidorna 2tGoN & 4tGoN sitter under varje bild perfekt. */
-figcaption{
-    text-align: center;
-}
-/* Gör att form länken sitter på rätt plats. */
-#index header p{
+
+/* Gör att form länken sitter på rätt plats. och de andra är grupperade eftersom smidighet. */
+#index header p, #Ecu img, h1{
     margin: 0;
 }
 /* Gör att texten sitter på rätt plats. */
@@ -144,30 +161,22 @@ figcaption{
     text-align: left;
     margin-left: 10px;
 }
-/* Responsivitet för NAVen */
-@media (max-width: 600px) {
-    nav ul{
-        flex-direction: column;
-    }
-}
-/* Rätt bild storlek och så att de passar på sidan. */
+
+/* Rätt bild storlek och så att de passar på sidan. Runda hörn på bilderna */
 #tvåtakt img{
-    width: 23%;
     margin: 0;
-    display: inline;
+    width:30%;
+    border-radius: 25px;
 }
 /* Gör så att bilderna sitter på  rätt plats  */
-#tvåtaktGoN img{
+#tvåtaktGoN img, #fyrtaktGoN img{
     margin-left: 15em;
 }
 /* Gör så texten är centrerad  */
-#tvåtaktGoN p{
+#tvåtaktGoN p, #fyrtaktGoN p, figcaption{
     text-align: center;
 }
-/* Gör att bilderna sitter rätt. */
-#Ecu img {
-    margin: 0;
-}
+
 /* gör att texten i header inte blir fet stil */
 #Ecu header p{
     font-weight: normal;
@@ -180,16 +189,13 @@ figcaption{
 #fyrtakt img{
     width: 23%;
     margin: 0;
-    display: inline;
-}
-/* gör så bilden sitter på rätt plats */
-#fyrtaktGoN img{
-    margin-left: 15em; 
-}
-/* gör så texten vid bilderna sitter på rätt plats. */
-#fyrtaktGoN p{
-    text-align: center; 
+    border-radius: 25px;
 }
 
-
+/* Responsivitet för NAVen */
+@media (max-width: 600px) {
+    nav ul{
+        flex-direction: column;
+    }
+}
 /* ALL KOD ÄR VALIDERAD OCH INGA ERRORS!!!!*/

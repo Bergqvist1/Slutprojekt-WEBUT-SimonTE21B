@@ -32,29 +32,42 @@
         </nav>
         <main>
             <section>
-                <img src="https://www.freepnglogos.com/uploads/smiley-png/image-thumb-smiley-community-central-fandom-18.png" alt="Glad">
-            </section>
-            <section>
-                <h2> Om du tycker något saknas ge gärna förslag!</h2>
+                
+                <h2 class="rubrikform"> Om du tycker något saknas ge gärna förslag!</h2>
                 <form action="action.php" method="post"> <!-- formuläret och dess metoder  -->
+                    <label for="ja"> Tycker du om sidan? </label><br>
+                    <input type="radio" id="ja" name="knapp">
+                    <label for="ja"> Ja </label>
+                    <input type="radio" id="nej" name="knapp">
+                    <label for="nej"> Nej </label><br>
                     <label for="Fnamn"> Skriv ditt förnamn </label><br> <!-- Rubrik till formulär cellen -->
                     <input type="text" name="Fname" id="Fnamn"><br> <!-- Formulär cellen -->
                     <label for="Enamn"> Skriv ditt efternamn </label><br>
                     <input type="text" name="Ename" id="Enamn"><br>
                     <label for="epost"> Skriv din Email-adress</label><br>
                     <input type="email" name="epost" id="epost"><br>
-                    <label for="Sida"> Välj sidan du tycker något saknas på</label>
-                    <select name="Sida" id="Sida"> <!-- Vilken sida som du föreslår info. En roll down meny i princip -->
-                        <option value="Index"> Startsida </option> <!-- ett av alternativen  -->
-                        <option value="2-takt"> 2-takt </option>
-                        <option value="2-taktGoN"> 2t Gamla & nya </option>
-                        <option value="4-takt"> 4-takt</option>
-                        <option value="4-taktGoN"> 4t Gamla & nya </option>
-                        <option value="Ecu"> Ecu </option>
-                    </select> <br>
-                    <p> Skriv ditt förslag här:  </p><br>
-                    <textarea> Förslag </textarea><br> <!-- I rutan står det förslag bara för att visa att det är där man ska skriva sitt förslag. -->
-                    <button type="submit" onclick="alert('Tack för förslaget!')">Skicka</button> <!-- Skicka knappen  -->
+                    <label for="lösenord"> Skriv ditt lösenord </label><br>
+                    <input type="password" name="lösenord" id="lösenord"><br>
+                    <label for="alt1"> Vilken sida tycker du något saknas på? </label><br>
+                    <input type="checkbox" id="alt1" name="alt1">
+                    <label for="alt1">2-takt </label>
+                    <input type="checkbox" id="alt2" name="alt2">
+                    <label for="alt2"> 2tGoN </label>
+                    <input type="checkbox" id="alt3" name="alt3">
+                    <label for="alt3"> Ecu </label> <br>
+                    <input type="checkbox" id="alt4" name="alt4">
+                    <label for="alt4"> 4-takt </label>
+                    <input type="checkbox" id="alt5" name="alt5">
+                    <label for="alt5"> 4tGoN </label>
+
+                    <br>
+                 
+                    <label for="förslag"> Skriv ditt förslag här: </label> <br>
+                    <textarea name="förslag" id="förslag"> Förslag </textarea><br> <!-- I rutan står det förslag bara för att visa att det är där man ska skriva sitt förslag. -->
+                    <input type="submit" name="skicka" id="skicka"> <!-- Skicka knappen  -->
+                    <label for="skicka"></label>
+                    
+
                 </form>
             </section>
         </main>
